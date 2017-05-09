@@ -1,0 +1,22 @@
+<div class="container main-section" ng-controller="teamsController">
+
+<h1> Teams List</h1>
+
+<table class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>#</th><th>Team</th><th>Players</th><th>Charity Picked</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="team in teams">
+			<td>{{$index + 1}}</td>
+			<td>{{team.name}}</td>
+			<td>{{team.player1}}, {{team.player2}}</td>
+			<td><a ng-href="{{team.charitywebsite}}" target="_blank">{{team.charity}}</a></td>
+		</tr>
+	</tbody>
+
+</table>
+	
+</div>
