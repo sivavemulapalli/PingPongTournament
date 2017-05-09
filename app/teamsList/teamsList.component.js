@@ -1,40 +1,17 @@
-(function() {
+(function(){
 	'use strict';
-	$('.nav.navbar-nav > li').on('click', function(e) {
-    $('.nav.navbar-nav > li').removeClass('active');
-    $(this).addClass('active');
-	}); 
+	angular
+	.module('pingpongapp')
+	.component('teamsListComponent', {
+		templateUrl:'teamsList/teamsList.template.html',
+		controller:teamsListController,
+		controllerAs:'teamsListCtrl',
 
-	var pingpongapp = angular.module('pingpongapp', ['ngRoute']);
-
-	pingpongapp.config(
-		function config($locationProvider,$routeProvider) {
-			$locationProvider.html5Mode(true);
-			 $routeProvider.
-			 	when('/', {
-		          templateUrl: 'pages/home.html'
-		        }).
-			 	when('/home', {
-		          templateUrl: 'pages/home.html'
-		        }).
-		        when('/draw', {
-		          templateUrl: 'pages/draw.html'
-		        }).
-		        when('/teams', {
-		          templateUrl: 'pages/teams.html'
-		        }).
-		         when('/rules', {
-		          templateUrl: 'pages/rules.html'
-		        }).
-		        otherwise({
-		        	redirectTo:'/'
-		        });
-    	}
-	);
+	});
 
 
-	pingpongapp.controller('teamsController', function($scope) {
-		$scope.teams = [
+	function teamsListController() {
+		this.teams = [
 			{
 				name:'Serves You Right',
 				player1:'Srinivas Raj',
@@ -172,7 +149,6 @@
 			}
 		];
 			
-	});
-
+	}
 
 })();

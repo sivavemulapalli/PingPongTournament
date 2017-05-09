@@ -1,4 +1,4 @@
-<div class="container main-section" ng-controller="teamsController">
+<div class="container main-section">
 
 <h1> Teams List</h1>
 
@@ -9,7 +9,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr ng-repeat="team in teams">
+		<tr ng-repeat="team in teamsListCtrl.teams">
 			<td>{{$index + 1}}</td>
 			<td>{{team.name}}</td>
 			<td>{{team.player1}}, {{team.player2}}</td>
