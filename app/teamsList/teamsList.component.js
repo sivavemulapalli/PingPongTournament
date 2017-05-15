@@ -37,8 +37,8 @@
 				name:'Slacker',
 				player1:'Will Acosta',
 				player2:'Terry Widamayer',
-				charity:'',
-				charitywebsite:''
+				charity:"Children's Hospital Colorado",
+				charitywebsite:'https://www.childrenscolorado.org/'
 			},
 			{
 				name:'LaserBeam',
